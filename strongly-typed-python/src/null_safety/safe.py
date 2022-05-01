@@ -6,4 +6,5 @@ optional_text: Optional[str] = None
 
 print(text.upper())
 if optional_text:
-    print(optional_text.upper())
+    upper: str = optional_text.upper()
+    print(upper)
