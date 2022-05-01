@@ -1,2 +1,3 @@
 features/work_dir/source.py
+features/work_dir/.pyre
 venv
