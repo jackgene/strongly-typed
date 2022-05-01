@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+    <style>
+    body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 0.8em;
+}
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+table.report-stats {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-left:auto;
+  margin-right:auto;
+}
+table.report-stats td, th {
+  border: 1px solid gray;
+  padding: 10px;
+}
+table.report-stats tr.header {
+  background-color: #66CCEE;
+}
+table.report-stats tr.footer {
+  background-color: grey;
+  font-weight: bold;
+}
+.bold {
+  font-weight: bold;
+}
+.info {
+  font-style: italic;
+}
+.float-right {
+  float: right;
+}
+.keyword {
+  font-weight: bold;
+}
+.failed {
+  background-color: #F2928C;
+}
+.passed {
+  background-color: #92DD96;
+}
+.skipped {
+  background-color: #8AF;
+}
+.error-message {
+  padding: 20px;
+  background-color: lightpink;
+  font-family: monospace;
+  white-space: pre-line;
+}
+div.results {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+div.feature-header {
+  padding: 10px;
+  font-weight: bold;
+}
+div.feature {
+  display: none;
+  padding: 10px;
+  border-color: white;
+}
+div.scenario {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+div.scenario-header {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+div.steps {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+div.step {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Test Report</h1>
+
+    <div class="report">
+      <table class="report-stats">
+        <thead>
+          <tr class="header">
+            <th></th>
+            <th></th>
+            <th colspan="4">Scenarios</th>
+            <th colspan="4">Steps</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr class="header-row">
+            <th></th>
+            <th>Feature</th>
+
+            <!-- Scenarios -->
+            <th>Total</th>
+            <th>Passed</th>
+            <th>Failed</th>
+            <th>Skipped</th>
+
+            <!-- Steps -->
+            <th>Total</th>
+            <th>Passed</th>
+            <th>Failed</th>
+            <th>Skipped</th>
+
+            <th>Duration (seconds)</th>
+            <th>Status</th>
+          </tr>
+        
+          <tr>
+            <td></td>
+            <td class="bold">Type-Checking</td>
+
+            <!-- Scenarios -->
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+
+            <!-- Steps -->
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+
+            <td>0</td>
+            <td class="failed">failed</td>
+          </tr>
+        
+
+          <tr class="footer">
+            <td>Totals</td>
+            <td>1</td>
+
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+
+            <td>0</td>
+            <td class="failed">failed</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="results">
+
+      <span class="info">Click feature or scenario to expand</span>
+      <!-- Features -->
+      
+        
+        <div class="feature-header failed" onclick="toggle('feature-1')">Feature: Type-Checking
+          <span class="float-right">[FAILED]</span>
+        </div>
+
+        <div id="feature-1" class="feature">
+
+          <!-- Scenarios -->
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-1')">Scenario Outline: Type-Checking `type_safety/safe.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @1.1 Type Safety</div>
+            <div id="feature-1-scenario-1" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-2')">Scenario Outline: Type-Checking `type_safety/safe.py` using `pyre --strict` -- @1.2 Type Safety</div>
+            <div id="feature-1-scenario-2" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">2.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-3')">Scenario Outline: Type-Checking `type_safety/safe.py` using `pyright` -- @1.3 Type Safety</div>
+            <div id="feature-1-scenario-3" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">6.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-4')">Scenario Outline: Type-Checking `type_safety/safe_invalid.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @1.4 Type Safety</div>
+            <div id="feature-1-scenario-4" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-5')">Scenario Outline: Type-Checking `type_safety/safe_invalid.py` using `pyre --strict` -- @1.5 Type Safety</div>
+            <div id="feature-1-scenario-5" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-6')">Scenario Outline: Type-Checking `type_safety/safe_invalid.py` using `pyright` -- @1.6 Type Safety</div>
+            <div id="feature-1-scenario-6" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-7')">Scenario Outline: Type-Checking `type_safety/unsafe_unannotated.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @1.7 Type Safety</div>
+            <div id="feature-1-scenario-7" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_unannotated.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-8')">Scenario Outline: Type-Checking `type_safety/unsafe_unannotated.py` using `pyre --strict` -- @1.8 Type Safety</div>
+            <div id="feature-1-scenario-8" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_unannotated.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-9')">Scenario Outline: Type-Checking `type_safety/unsafe_unannotated.py` using `pyright` -- @1.9 Type Safety</div>
+            <div id="feature-1-scenario-9" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_unannotated.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-10')">Scenario Outline: Type-Checking `type_safety/unsafe_any.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @1.10 Type Safety</div>
+            <div id="feature-1-scenario-10" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_any.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step failed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+                      <div class="error-message">
+                      
+                        <span class="error-message-line">Assertion Failed: Expected to fail, but passed</span>
+                      
+                      </div>
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-11')">Scenario Outline: Type-Checking `type_safety/unsafe_any.py` using `pyre --strict` -- @1.11 Type Safety</div>
+            <div id="feature-1-scenario-11" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_any.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-12')">Scenario Outline: Type-Checking `type_safety/unsafe_any.py` using `pyright` -- @1.12 Type Safety</div>
+            <div id="feature-1-scenario-12" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `type_safety/unsafe_any.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step failed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+                      <div class="error-message">
+                      
+                        <span class="error-message-line">Assertion Failed: Expected to fail, but passed</span>
+                      
+                      </div>
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-13')">Scenario Outline: Type-Checking `null_safety/safe.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @2.1 Null Safety</div>
+            <div id="feature-1-scenario-13" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-14')">Scenario Outline: Type-Checking `null_safety/safe.py` using `pyre --strict` -- @2.2 Null Safety</div>
+            <div id="feature-1-scenario-14" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-15')">Scenario Outline: Type-Checking `null_safety/safe.py` using `pyright` -- @2.3 Null Safety</div>
+            <div id="feature-1-scenario-15" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step failed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+                      <div class="error-message">
+                      
+                        <span class="error-message-line">Assertion Failed: Expected to pass, but failed with: Loading configuration file at /Users/jleow/Development/Personal/Strongly Typed/strongly-typed-python/features/work_dir/pyrightconfig.json</span>
+                      
+                        <span class="error-message-line">Assuming Python version 3.10</span>
+                      
+                        <span class="error-message-line">Assuming Python platform Darwin</span>
+                      
+                        <span class="error-message-line">No include entries specified; assuming /Users/jleow/Development/Personal/Strongly Typed/strongly-typed-python/features/work_dir</span>
+                      
+                        <span class="error-message-line">Auto-excluding **/node_modules</span>
+                      
+                        <span class="error-message-line">Auto-excluding **/__pycache__</span>
+                      
+                        <span class="error-message-line">Auto-excluding **/.*</span>
+                      
+                        <span class="error-message-line">Searching for source files</span>
+                      
+                        <span class="error-message-line">Found 1 source file</span>
+                      
+                        <span class="error-message-line">/Users/jleow/Development/Personal/Strongly Typed/strongly-typed-python/features/work_dir/source.py</span>
+                      
+                        <span class="error-message-line">  /Users/jleow/Development/Personal/Strongly Typed/strongly-typed-python/features/work_dir/source.py:9:11 - error: Argument type is unknown</span>
+                      
+                        <span class="error-message-line">    Argument corresponds to parameter "values" in function "print" (reportUnknownArgumentType)</span>
+                      
+                        <span class="error-message-line">1 error, 0 warnings, 0 informations </span>
+                      
+                        <span class="error-message-line">Completed in 0.586sec</span>
+                      
+                      </div>
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-16')">Scenario Outline: Type-Checking `null_safety/safe_invalid_write_none.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @2.4 Null Safety</div>
+            <div id="feature-1-scenario-16" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_write_none.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-17')">Scenario Outline: Type-Checking `null_safety/safe_invalid_write_none.py` using `pyre --strict` -- @2.5 Null Safety</div>
+            <div id="feature-1-scenario-17" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_write_none.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-18')">Scenario Outline: Type-Checking `null_safety/safe_invalid_write_none.py` using `pyright` -- @2.6 Null Safety</div>
+            <div id="feature-1-scenario-18" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_write_none.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-19')">Scenario Outline: Type-Checking `null_safety/safe_invalid_unchecked_read.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @2.7 Null Safety</div>
+            <div id="feature-1-scenario-19" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_unchecked_read.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-20')">Scenario Outline: Type-Checking `null_safety/safe_invalid_unchecked_read.py` using `pyre --strict` -- @2.8 Null Safety</div>
+            <div id="feature-1-scenario-20" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_unchecked_read.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">2.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-21')">Scenario Outline: Type-Checking `null_safety/safe_invalid_unchecked_read.py` using `pyright` -- @2.9 Null Safety</div>
+            <div id="feature-1-scenario-21" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `null_safety/safe_invalid_unchecked_read.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-22')">Scenario Outline: Type-Checking `exhaustive/safe.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @3.1 Exhaustiveness</div>
+            <div id="feature-1-scenario-22" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-23')">Scenario Outline: Type-Checking `exhaustive/safe.py` using `pyre --strict` -- @3.2 Exhaustiveness</div>
+            <div id="feature-1-scenario-23" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">2.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-24')">Scenario Outline: Type-Checking `exhaustive/safe.py` using `pyright` -- @3.3 Exhaustiveness</div>
+            <div id="feature-1-scenario-24" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should pass
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-25')">Scenario Outline: Type-Checking `exhaustive/safe_invalid.py` using `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .` -- @3.4 Exhaustiveness</div>
+            <div id="feature-1-scenario-25" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step failed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+                      <div class="error-message">
+                      
+                        <span class="error-message-line">Assertion Failed: Expected to fail, but passed</span>
+                      
+                      </div>
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-26')">Scenario Outline: Type-Checking `exhaustive/safe_invalid.py` using `pyre --strict` -- @3.5 Exhaustiveness</div>
+            <div id="feature-1-scenario-26" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyre --strict`
+                      <span class="float-right">1.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step failed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+                      <div class="error-message">
+                      
+                        <span class="error-message-line">Assertion Failed: Expected to fail, but passed</span>
+                      
+                      </div>
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+            
+            <div class="scenario-header" onclick="toggle('feature-1-scenario-27')">Scenario Outline: Type-Checking `exhaustive/safe_invalid.py` using `pyright` -- @3.6 Exhaustiveness</div>
+            <div id="feature-1-scenario-27" class="scenario">
+
+              <!-- Steps -->
+              <div class="steps">
+                
+                  
+                    <div class="step passed">Given: the Python source `exhaustive/safe_invalid.py`
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">When: running `pyright`
+                      <span class="float-right">5.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+                  
+                    <div class="step passed">Then: type-checking should fail
+                      <span class="float-right">0.0 seconds</span>
+                    </div>
+
+                    <!-- Errors -->
+                    
+
+                  
+                
+              </div>
+              <!-- End Steps -->
+
+            </div>
+          
+          <!-- End Scenarios -->
+
+        </div>
+      
+      <!-- End Features -->
+
+    </div>
+
+    <script>
+      function toggle(id) {
+          var visibility = document.getElementById(id).style.display;
+          if (visibility === 'none') {
+              document.getElementById(id).style.display = 'block';
+          } else {
+            document.getElementById(id).style.display = 'none';
+          }
+      }
+    </script>
+  </body>
+</html>
