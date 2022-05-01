@@ -1,0 +1,7 @@
+{
+  "site_package_search_strategy": "pep561",
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": "/Users/jleow/Development/Personal/Strongly Typed/strongly-typed-python/venv/lib/pyre_check/taint"
+}
