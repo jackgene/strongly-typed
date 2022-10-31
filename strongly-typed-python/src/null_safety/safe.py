@@ -1,10 +1,8 @@
-from typing import Optional
+import random
 
-
-text: str = "Lorem Ipsum"
-optional_text: Optional[str] = None
-
-print(text.upper())
-if optional_text:
-    upper: str = optional_text.upper()
-    print(upper)
+optional_text: str | None = random.choice([None, "lorem ipsum"])
+match optional_text:
+    case None:
+        print("There was nothing")
+    case text:
+        print(text.upper())

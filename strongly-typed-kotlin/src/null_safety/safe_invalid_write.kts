@@ -1,0 +1,1 @@
+val text: String = null

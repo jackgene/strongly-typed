@@ -1,5 +1,5 @@
 behave==1.2.6
 behave-html-formatter==0.9.8
-mypy==0.950
+mypy==0.961
 pyre-check==0.9.13
-pyright==1.1.242
+pyright==1.1.254

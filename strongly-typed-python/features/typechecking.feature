@@ -22,3 +22,7 @@ Feature: Type-Checking
       | Python Source              | Type Checks | Notes                                              |
       | exhaustive/safe.py         | pass        | Match accounts for all possible enum values        |
       | exhaustive/safe_invalid.py | fail        | Match does not account for all possible enum value |
+
+    Examples: Recursive Type
+      | Python Source          | Type Checks | Notes                        |
+      | recursive_type/json.py | pass        | JSON is an example of a type |
