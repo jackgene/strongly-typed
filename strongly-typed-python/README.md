@@ -17,3 +17,8 @@ Once your environment is set up, you should be able to run:
 ```shell
 behave
 ```
+
+Or to output a HTML report:
+```shell
+behave -f behave_html_formatter:HTMLFormatter > ../docs/python-type-checkers-results.html
+```

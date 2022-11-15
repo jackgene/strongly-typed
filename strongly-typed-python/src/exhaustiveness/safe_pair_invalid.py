@@ -23,9 +23,8 @@ match (transport, status):
         message = "🛳✅"
     case (Transport.Ground, Status.Inactive):
         message = "🚙❌"
-    case (Transport.Sea, Status.Inactive):
-        message = "🛳❌"
-    case _:
-        message = "🤷"
+    # Inexhaustive, missing this case:
+    # case (Transport.Sea, Status.Inactive):
+    #     message = "🛳❌"
 
 print(message)
