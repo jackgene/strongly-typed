@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -it --rm -v "$PWD/src":/strongly-typed -w /strongly-typed python:3 bash -c "echo \"export PS1='% '\" >> ~/.bashrc && bash"
