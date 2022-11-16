@@ -1,19 +1,24 @@
 import os
 
-from behave.model import Examples, Feature, Row, ScenarioOutline, Table
+from behave.model import Examples, Feature, Row, Scenario, ScenarioOutline, Table
 from behave.runner import Context
+from behave.tag_expression import TagExpression
 
 
 def before_all(_: Context):
     os.chdir("features/work_dir")
 
 
-def before_feature(_: Context, feature: Feature):
-    commands: list[str] = [
-        "mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .",
-        "pyre --strict",
-        "pyright",
-    ]
+def before_feature(context: Context, feature: Feature):
+    # TODO see if it's possible to get run tags without using protected members
+    run_tags: TagExpression = context._runner.config.tags
+    commands: list[str] = []
+    if run_tags.check(["mypy"]):
+        commands.append("mypy --disallow-any-generics --disallow-untyped-defs --disallow-untyped-calls .")
+    if run_tags.check(["pyre"]):
+        commands.append("pyre --strict")
+    if run_tags.check(["pyright"]):
+        commands.append("pyright")
     for untyped_scenario in feature.scenarios:
         outline: ScenarioOutline = untyped_scenario
         for untyped_examples in outline.examples:
@@ -38,3 +43,12 @@ def before_feature(_: Context, feature: Feature):
                 line=table.line,
                 rows=new_rows
             )
+
+
+def before_scenario(context: Context, scenario: Scenario):
+    type_checker_tags = ["mypy", "pyre", "pyright"]
+    # scenario.tags.remove(type_checker_tags)
+    for tag in type_checker_tags:
+        scenario.tags.remove(tag)
+        if tag in scenario.steps[1].name:
+            scenario.tags.append(tag)

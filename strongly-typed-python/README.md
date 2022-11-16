@@ -20,5 +20,7 @@ behave
 
 Or to output a HTML report:
 ```shell
-behave -f behave_html_formatter:HTMLFormatter > ../docs/python-type-checkers-results.html
+behave -t mypy -f behave_html_formatter:HTMLFormatter > ../docs/python-type-checking/mypy.html
+behave -t pyre -f behave_html_formatter:HTMLFormatter > ../docs/python-type-checking/pyre.html
+behave -t pyright -f behave_html_formatter:HTMLFormatter > ../docs/python-type-checking/pyright.html
 ```
