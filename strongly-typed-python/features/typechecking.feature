@@ -3,6 +3,7 @@ Feature: Type-Checking
   @mypy @pyre @pyright
   Scenario Outline: Type-Checking `<Python Source>` using `<Type Checker>`
     Given the Python source `<Python Source>`
+    And it demonstrates that "<Notes>"
     When running `<Type Checker>`
     Then type-checking should <Type Checks>
 

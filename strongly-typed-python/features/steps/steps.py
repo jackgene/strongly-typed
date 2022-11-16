@@ -14,6 +14,11 @@ def step_impl(context: Context, python_source: str):
     shutil.copyfile(f"../../src/{python_source}", "source.py")
 
 
+@given('it demonstrates that "{note}"')
+def step_impl(context: Context, note: str):
+    pass
+
+
 @when("running `{type_check_command}`")
 def step_impl(context: Context, type_check_command: str):
     context.process = subprocess.run(type_check_command, shell=True, capture_output=True)
