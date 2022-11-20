@@ -13,13 +13,11 @@ this project also includes some tests that run them all.
 - [Pyright](https://jackgene.github.io/strongly-typed/python-type-checking/pyright.html)
 
 tl;dr
-- *Pyright* has always been the strongest and so far that remains the case.
-  This is particularly true when it comes to exhaustiveness checking of
-  Python 3.10 `match`es.
-- *MyPy* is largely on parity with Pyright, but exhaustiveness checking is
-  slightly lacking.
-- *Pyre* is currently the weakest of the 3. However, it does do one thing the
-  others don't, which is prevent public uses of the `Any` type.
+- **Pyright** has always been the strongest and so far that remains the case.
+  This is particularly true when it comes to exhaustiveness checking of Python 3.10 `match`es.
+- **MyPy** is largely on parity with Pyright, but exhaustiveness checking is slightly lacking.
+- **Pyre** is currently the weakest of the 3.
+  However, it does do one thing the others don't, which is prevent public uses of the `Any` type.
 
 ### Running The Tests
 To run the tests locally, first set up your environment (you should only have to do this once):
