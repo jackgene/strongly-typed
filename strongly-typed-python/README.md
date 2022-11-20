@@ -4,9 +4,24 @@ This covers type hints and other typing features introduced in
 [PEP-484](https://peps.python.org/pep-0484/).
 
 ## Comparing Type Checkers
-Note that since there are multiple implementation of the Python type checker, this project also
-includes some tests that run them all.
+Note that since there are multiple implementation of the Python type checker, 
+this project also includes some tests that run them all.
 
+### Test Results
+- [MyPy](https://jackgene.github.io/strongly-typed/python-type-checking/mypy.html)
+- [Pyre](https://jackgene.github.io/strongly-typed/python-type-checking/pyre.html)
+- [Pyright](https://jackgene.github.io/strongly-typed/python-type-checking/pyright.html)
+
+tl;dr
+- *Pyright* has always been the strongest and so far that remains the case.
+  This is particularly true when it comes to exhaustiveness checking of
+  Python 3.10 `match`es.
+- *MyPy* is largely on parity with Pyright, but exhaustiveness checking is
+  slightly lacking.
+- *Pyre* is currently the weakest of the 3. However, it does do one thing the
+  others don't, which is prevent public uses of the `Any` type.
+
+### Running The Tests
 To run the tests locally, first set up your environment (you should only have to do this once):
 1. Install Python 3.10 if not already installed
    (we are evaluating `match`, amongst other things, which is a Python 3.10 feature).
